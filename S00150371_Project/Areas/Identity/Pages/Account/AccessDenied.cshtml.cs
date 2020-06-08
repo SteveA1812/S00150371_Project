@@ -4,15 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace S00150371_Project.Pages
+namespace S00150371_Project.Areas.Identity.Pages.Account
 {
-    public class AboutModel : PageModel
+    public class AccessDeniedModel : PageModel
     {
-        public string Message { get; set; }
-
         public void OnGet()
         {
-            Message = "Your application description page.";
+
         }
     }
 }
+

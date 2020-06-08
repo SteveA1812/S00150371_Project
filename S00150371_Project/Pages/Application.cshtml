@@ -1,8 +1,117 @@
 ﻿@page
 @model HDip_project_S00150371_V2.Pages.ApplicationModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Application";
 }
 
 <h2>Application</h2>
 
+<p>Please complete all sections of the application form and submit</p>
+<div class="form-style-5">
+    <form method="post">
+
+        <h3>Further Study Application</h3>
+        <div asp-validation-summary="All"></div>
+
+        <div class="tab">
+            <label asp-for="StaffApplication.StaffFirstName"></label>
+            <input placeholder="First name..." asp-for="StaffApplication.StaffFirstName">
+            @Html.ValidationMessage("SStaffApplication.StaffFirstName")
+        </div>
+        <div class="tab">
+            <label asp-for="StaffApplication.StaffSurname"></label>
+            <input placeholder="Surname..." asp-for="StaffApplication.StaffSurname">
+            @Html.ValidationMessage("StaffApplication.StaffSurname")
+        </div>
+        <div class="tab">
+            <label asp-for="StaffApplication.Department"></label>
+            <input placeholder="Department..." asp-for="StaffApplication.Department">
+            @Html.ValidationMessage("StaffApplication.Department")
+        </div>
+        <div class="tab">
+            <label asp-for="StaffApplication.Function"></label>
+            <input placeholder="Function..." asp-for="StaffApplication.Function">
+            @Html.ValidationMessage("StaffApplication.Function")
+        </div>
+
+
+
+
+
+        <div class="tab">
+            <label asp-for="StaffApplication.CourseName"></label>
+            <input placeholder="Course name..." asp-for="StaffApplication.CourseName">
+            @Html.ValidationMessage("StaffApplication.CourseName")
+        </div>
+        <div class="tab">
+            <label asp-for="StaffApplication.Level"></label>
+            <input placeholder="Course Level" asp-for="StaffApplication.Level">
+            @Html.ValidationMessage("StaffApplication.Level")
+        </div>
+        <div class="tab">
+            <label asp-for="StaffApplication.Provider"></label>
+            <input placeholder="Provider" asp-for="StaffApplication.Provider">
+            @Html.ValidationMessage("StaffApplication.Provider")
+        </div>
+        <div class="tab">
+
+            <label asp-for="StaffApplication.Details"></label>
+            <input placeholder="Course Details..." asp-for="StaffApplication.Details">
+
+
+        </div>
+        <div class="tab">
+
+            <label asp-for="StaffApplication.StartYear"></label>
+            <input placeholder="Start Year..." asp-for="StaffApplication.StartYear">
+
+
+        </div>
+
+        <div>
+            <p>Please select your Mode of Study</p>
+            @Html.RadioButtonFor(m => m.StaffApplication.Mode, "Full Time")@Html.Label("Full Time")
+            @Html.RadioButtonFor(m => m.StaffApplication.Mode, "Part Time")@Html.Label("Part Time")
+
+        </div>
+
+        <div class="tab">
+            <label asp-for="StaffApplication.Duration"></label>
+            <input placeholder="Duration" asp-for="StaffApplication.Duration">
+            @Html.ValidationMessage("StaffApplication.Duration")
+        </div>
+        <div class="tab">
+            <label asp-for="StaffApplication.Cost"></label>
+            <input placeholder="Cost" asp-for="StaffApplication.Cost">
+            @Html.ValidationMessage("StaffApplication.Cost")
+        </div>
+        <div class="tab">
+            <label asp-for="StaffApplication.Q1"></label>
+            <input placeholder="Q1" asp-for="StaffApplication.Q1">
+            @Html.ValidationMessage("StaffApplication.Q1")
+        </div>
+        <div class="tab">
+            <label asp-for="StaffApplication.Q2"></label>
+            <input placeholder="Q2" asp-for="StaffApplication.Q2">
+            @Html.ValidationMessage("StaffApplication.Q2")
+        </div>
+        <div class="tab">
+            <label asp-for="StaffApplication.Q3"></label>
+            <input placeholder="Q3" asp-for="StaffApplication.Q3">
+            @Html.ValidationMessage("StaffApplication.Q3")
+        </div>
+        <div class="tab">
+            <label asp-for="StaffApplication.Q4"></label>
+            <input placeholder="Q4" asp-for="StaffApplication.Q4">
+            @Html.ValidationMessage("StaffApplication.Q4")
+        </div>
+        <div class="tab">
+            <label asp-for="StaffApplication.Q5"></label>
+            <input placeholder="Q5" asp-for="StaffApplication.Q5">
+            @Html.ValidationMessage("StaffApplication.Q5")
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
